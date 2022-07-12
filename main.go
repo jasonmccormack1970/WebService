@@ -61,4 +61,15 @@ func main() {
 	// }
 
 	// fmt.Println(u2)
+	port, err := startWebServer(3000, 10)
+	fmt.Println(port, err)
+}
+
+func startWebServer(port int, numberOfRetries int) (int, error) {
+	fmt.Println("Starting Webserver...")
+	fmt.Println("Webserver started")
+	fmt.Println(port, numberOfRetries)
+	//return errors.New("Something Went wrong")
+	return port, nil
+
 }
